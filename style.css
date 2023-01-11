@@ -1,0 +1,31 @@
+* {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    color: goldenrod;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
+}
+
+.container{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 6fr 0.5fr;
+}
+
+.grey {
+    min-height: 50px;
+    width: auto;
+    background: lightslategrey;
+    opacity: 0.5;
+}
+
+.navbar{grid-area: 1/1/2/4;
+}
+.sidebar{grid-area: 2/1/3/2;
+}
+.main{grid-area: 2/2/3/4;
+}
+.footer{grid-area: 3/1/4/4;
+}
