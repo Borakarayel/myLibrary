@@ -1,31 +1,61 @@
 * {
-    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    
     color: goldenrod;
     box-sizing: border-box;
     font-family: 'Roboto', 'Courier New', Courier, monospace;
 }
 
-.container{
+.darkgrey{
+    background: #232323;
+}
+.grey{
+    background: rgb(47, 47, 47);
+}
+.lightgrey{
+    background: gray;
+}
+
+body{
+    background-image: url(imgs/pexels-element-digital-1370295.jpg);
+    background-repeat: no-repeat;
+    background-size: 1800px 1000px;
     display: grid;
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-columns: 90px 1fr 90px;
+    grid-template-rows: 70px 1fr 50px;
+}
+    .container{grid-area: 2/2/3/3;
+        display: grid;
+        grid-template-columns: 1fr 3fr ;
+        grid-template-rows:  1fr 3fr;
+        gap: 20px;
+        border-radius: 1.50%;
+        border: 2px solid goldenrod;
+    }
+         .form{grid-area: 1/1/3/2;
+            border-radius: 1.50%;
+            padding: 10px;
+        }
+         .logo{width: 90px;
+            height: auto; 
+            border-radius: 1.50%;
+            padding: 10px;;
+         }
+        .bookArea{grid-area: 1/2/3/3;
+            border-radius: 1.50%;
+            padding: 10px;}
+    .footer{grid-area: 3/2/4/3;
+            border-radius: 1.50%;
+            padding: 10px;
+            text-align: center;
+         
+    }
 
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 6fr 0.5fr;
-}
+    .footer img {
+        align-items: center;
+        gap: 5px;
+        height: 30px;
+        border-radius: 50%;
+    }
 
-.grey {
-    min-height: 50px;
-    width: auto;
-    background: lightslategrey;
-    opacity: 0.5;
-}
-
-.navbar{grid-area: 1/1/2/4;
-}
-.sidebar{grid-area: 2/1/3/2;
-}
-.main{grid-area: 2/2/3/4;
-}
-.footer{grid-area: 3/1/4/4;
-}
